@@ -25,8 +25,8 @@ public:
     };
 
     void deallocate(T *p, std::size_t n) {
-        reserve_count_--;
-        if (reserve_count_ == 0) {
+        reserve_count_ -= n;
+        if (reserve_count_ <= 0) {
             std::free(p);
         }
     }
