@@ -17,6 +17,6 @@ set_target_properties(test_allocator PROPERTIES
         INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
         )
 
-#target_link_libraries(test_allocator ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY} ip_address_lib tool_dir)
+target_link_libraries(test_allocator ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
 
 add_test(${PROJECT_NAME}_executable test_allocator)
